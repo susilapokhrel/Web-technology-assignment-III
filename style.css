@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Helvetica;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+  text-align: center;
+
+   
+}
+h1{
+   font-size: 3rem;
+   padding: 1rem;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+
+.card:nth-child(1)>h1{
+  background-color: pink;
+  font-weight: 700;
+}
+.card:nth-child(2)>h1{
+  background-color: red;
+  color: #ffff;
+  font-weight: 700;
+}
+.card:nth-child(3)>h1{
+  background-color: rgb(89, 120, 33);
+  color: #111;
+  font-weight: 700;
+}
+.card{
+  height: 20rem;
+  width: 30rem;
+  background-color: #8c9194;
+  color: #111;
+  border: 3px solid #111;
+  position: relative;
+}
+.card>h1{
+  font-size: 1.7rem;
+  border: 3px solid #111;
+  position: absolute;
+  right: 0;
+  padding-left: 1rem;
+ 
+}
+.card>p{
+  position: absolute;
+  top: 25%;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+}
+
+@media (min-width: 992px) {
+  .grid{
+    display: flex;
+    justify-content: space-around;
+  }
+  .card{
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px ) and (max-width: 991px){
+  .grid{
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .card:nth-child(1){
+    margin-left: 1rem;
+  }
+  
+  .card{
+    width: 44%;
+    margin: 1%;
+  }
+  #climateChange{
+    width: 90%;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 767px){
+ .card{
+  height: 15rem;
+  width: 80%;
+  margin: 1%;
+  margin-left: 4rem;
+ }
+ .grid{
+  display: flex;
+  flex-direction: column;
+ }
+}
+css yo
